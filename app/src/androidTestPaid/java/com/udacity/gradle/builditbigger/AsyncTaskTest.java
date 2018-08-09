@@ -2,7 +2,6 @@ package com.udacity.gradle.builditbigger;
 
 import android.app.Application;
 import android.support.test.InstrumentationRegistry;
-import android.support.test.runner.AndroidJUnit4;
 import android.test.ApplicationTestCase;
 
 import java.util.ArrayList;
@@ -11,9 +10,9 @@ import java.util.concurrent.CountDownLatch;
 // Derived from http://marksunghunpark.blogspot.com/2015/05/how-to-test-asynctask-in-android.html
 public class AsyncTaskTest extends ApplicationTestCase {
 
-    ArrayList<String> jokeList = null;
-    Exception mError = null;
-    CountDownLatch signal = null;
+    private ArrayList<String> jokeList = null;
+    private Exception mError = null;
+    private CountDownLatch signal = null;
 
     public AsyncTaskTest() {
         super(Application.class);
@@ -21,11 +20,13 @@ public class AsyncTaskTest extends ApplicationTestCase {
 
     @Override
     protected void setUp() throws Exception {
+        super.setUp();
         signal = new CountDownLatch(1);
     }
 
     @Override
     protected void tearDown() throws Exception {
+        super.tearDown();
         signal.countDown();
     }
 

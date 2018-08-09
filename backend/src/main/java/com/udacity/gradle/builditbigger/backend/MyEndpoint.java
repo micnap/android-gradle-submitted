@@ -28,8 +28,6 @@ import com.google.api.server.spi.config.Api;
 import com.google.api.server.spi.config.ApiMethod;
 import com.google.api.server.spi.config.ApiNamespace;
 
-import javax.inject.Named;
-
 /**
  * An endpoint class we are exposing
  */
@@ -50,9 +48,7 @@ public class MyEndpoint {
     @ApiMethod(name = "fetchJoke")
     public JokeBean fetchJoke() {
 
-        JokeBean response = new JokeBean();
-
-        return response;
+        return new JokeBean();
     }
 
 }

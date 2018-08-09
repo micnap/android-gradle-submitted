@@ -79,7 +79,7 @@ class EndpointsAsyncTask extends AsyncTask<Context, Void, ArrayList<String>> {
         return this;
     }
 
-    public static interface EndpointsGetTaskListener {
-        public void onComplete(ArrayList<String> joke, Exception e);
+    public interface EndpointsGetTaskListener {
+        void onComplete(ArrayList<String> joke, Exception e);
     }
 }

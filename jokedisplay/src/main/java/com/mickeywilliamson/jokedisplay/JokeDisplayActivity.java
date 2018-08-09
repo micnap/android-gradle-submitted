@@ -8,16 +8,15 @@ import java.util.ArrayList;
 
 public class JokeDisplayActivity extends AppCompatActivity {
 
-    private TextView tvJokeText;
-    private TextView tvJokeAnswer;
+    TextView tvJokeText;
+    TextView tvJokeAnswer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_joke_display);
 
-        ArrayList<String> joke = new ArrayList<>();
-        joke = getIntent().getStringArrayListExtra("JOKE");
+        ArrayList<String> joke = getIntent().getStringArrayListExtra("JOKE");
 
         tvJokeText = findViewById(R.id.jokeText);
         tvJokeText.setText(joke.get(0));
