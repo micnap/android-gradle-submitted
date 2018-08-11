@@ -57,7 +57,7 @@ class EndpointsAsyncTask extends AsyncTask<Context, Void, ArrayList<String>> {
     protected void onPostExecute(final ArrayList<String> result) {
 
         Intent intent = new Intent(context, JokeDisplayActivity.class);
-        intent.putStringArrayListExtra("JOKE", result);
+        intent.putStringArrayListExtra(JokeDisplayActivity.KEY_JOKE, result);
         if (this.mListener != null) {
             this.mListener.onComplete(result, mError);
 

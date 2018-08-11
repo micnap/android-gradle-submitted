@@ -82,7 +82,7 @@ class EndpointsAsyncTask extends AsyncTask<Context, Void, ArrayList<String>> {
             public void onAdClosed() {
                 super.onAdClosed();
                 Intent intent = new Intent(context, JokeDisplayActivity.class);
-                intent.putStringArrayListExtra("JOKE", result);
+                intent.putStringArrayListExtra(JokeDisplayActivity.KEY_JOKE, result);
                 context.startActivity(intent);
             }
         });

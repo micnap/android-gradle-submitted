@@ -43,7 +43,8 @@ import com.google.api.server.spi.config.ApiNamespace;
 public class MyEndpoint {
 
     /**
-     * A simple endpoint method that takes a name and says Hi back
+     * Fetches a joke from the jokeprovider module which is the makeshift database from which
+     * the Google Cloud Endpoint server fetches the data.
      */
     @ApiMethod(name = "fetchJoke")
     public JokeBean fetchJoke() {
